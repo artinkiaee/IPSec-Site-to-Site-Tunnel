@@ -1,0 +1,109 @@
+# .gitignore for Secure Network Simulation Project
+
+# -- Operating System Files --
+# Ignore macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Ignore Windows system files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Ignore Linux/Unix temporary files
+*~
+.*.swp
+.#*
+
+# -- Virtualization Files --
+# Ignore VirtualBox files
+*.vbox
+*.vbox-prev
+*.vdi
+*.vmdk # Also used by VMware, covers both
+*.sav # Saved state
+*.nvram # BIOS/EFI state for VMware/VirtualBox
+*.vmsd # VMware snapshot metadata
+*.vmsn # VMware snapshot file
+*.log # Generic log files - BE CAREFUL, might ignore desired logs too.
+*.iso # Installation media - should not be committed
+
+# Ignore Vagrant specific files (if used)
+.vagrant/
+
+# Ignore VMware files (some might overlap with VirtualBox)
+*.vmx
+*.vmxf
+*.vmem
+vmware*.log
+vprint*.log
+
+# -- Network Simulation / Packet Captures --
+# Ignore large packet capture files
+*.pcap
+*.pcapng
+
+# -- Configuration Files --
+# IMPORTANT: Ignore files containing actual secrets.
+# Add specific filenames if you know them.
+# Example:
+# ipsec.secrets
+# *.key
+# *.pem
+# *.psk
+
+# If you store sanitized configs, make sure the originals
+# with secrets are not accidentally committed.
+
+# -- Python Files (if using scripts) --
+# Ignore Python virtual environments
+venv/
+env/
+.venv/
+*/venv/
+*/env/
+*/.venv/
+
+# Ignore Python compiled files and caches
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# -- IDE / Editor Files --
+# Ignore VS Code files
+.vscode/
+
+# Ignore JetBrains IDE files (PyCharm, IntelliJ, etc.)
+.idea/
+
+# Ignore Sublime Text files
+*.sublime-project
+*.sublime-workspace
+
+# -- Other --
+# Ignore temporary test output or logs (be specific if possible)
+# output/
+# temp_results/
+# test_log.txt
+
